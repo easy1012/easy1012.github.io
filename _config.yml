@@ -9,8 +9,8 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Easydata
-subtitle: "machinelearning,deep learning and nlp"
+title: Easy
+subtitle: "machinelearning,deep learning and nlp and reinforce learning"
 email: jibong7600@gmail.com
 name: JiWon Lee
 description: >
