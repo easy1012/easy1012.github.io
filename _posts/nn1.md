@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Neural Network part1"
-date:   2020-07-01T14:25:52-05:00
+date:   2020-07-01
 author: 이지원
 categories: deepLearning
 ---
