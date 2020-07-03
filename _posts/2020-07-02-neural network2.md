@@ -1,4 +1,4 @@
-﻿
+
 ---
 layout: post
 title:  "Neural Network part2"
