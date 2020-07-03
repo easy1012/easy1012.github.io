@@ -3,6 +3,7 @@ layout: post
 title:  "Neural Network"
 date:   2020-07-02T
 author: 이지원
+use_math: true
 categories: deepLearning
 ---
 
