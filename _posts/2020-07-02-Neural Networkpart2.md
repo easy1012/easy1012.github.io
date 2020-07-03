@@ -20,7 +20,8 @@ $h_3,h_4$도 같은 방식으로 진행됩니다. 여기서 f는 activation func
 $$h_5 = f(w_{17}h_1+w_{18}h_2+w_{19}h_3+w_{20}h_4)$$  
 $h_6,h_7,h_8$까지 같은 방식으로 진행합니다. 마지막, $\hat{y_1},\hat{y_2},\hat{y_3}$부분은 위와 같은 방식으로 진행하는데, 꽃이 3가지 종류이기 때문에, 어떤 꽃일것 같은지 확률값으로 도출하기 위해 다른 activation function을 이용하여 값을 도출합니다. 이 값을 loss function을 기준으로 하여 진짜 y값과 비교하여, weight들을 학습합니다.
 
-이제 backpropogation에 대해서 확인해 봅시다.$\hat{y_1}$에 연결된 w는 $w_{33},w_{34},w_{35},w_{36}$(갈색)입니다. 다 하기에는 너무 많으니 이중 하나 $w_{33}$ 만 확인해서 봅시다. $$k = \partial\hat{y_1}/\partial w_{33} =$$  
+이제 backpropogation에 대해서 확인해 봅시다.$\hat{y_1}$에 연결된 w는 $w_{33},w_{34},w_{35},w_{36}$(갈색)입니다. 다 하기에는 너무 많으니 이중 하나 $w_{33}$ 만 확인해서 봅시다.  
+$$k = \partial\hat{y_1}/\partial w_{33} =$$  
 $$\partial f(w_{33}h_5+w_{34}h_6+w_{35}h_7+w_{36}*h_8)/\partial w_{33}$$  
 을 통해 구할 수 있습니다. 하지만, $h_5,h_6,h_7,h_8$은 앞의 weight들과 관련이 있습니다. 그럼 앞에있는 weight값들도 최적값을 구해야 할텐데, 앞의 weight값을 살펴보면, $w_{17},w_{18},w_{19},w_{20}$(초록색)은 $\partial\hat{y_1}/\partial w_{17} = k*\partial h_5/\partial w_{17}$이런 식으로 미분 값들의 곱으로 표현 될 수 있습니다. 앞의 layer의 weight들도 마찬가지 입니다. 따라서, loss function의 조건을 만족하는 weigth들은 chain rule을 통해 쉽게 계산이 될 수 있고, 뒤에서부터 계산하는 backpropagation을 사용하는 이유가 여기에 있습니다.
 
